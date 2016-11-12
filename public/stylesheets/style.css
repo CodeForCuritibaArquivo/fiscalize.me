@@ -1,8 +1,39 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: table;
+  width: 100%;
+  overflow: hidden;
 }
-
-a {
-  color: #00B7FF;
+.nav-margin{
+  margin: 0 !important;
+}
+.buscador{
+height: 100%;
+background: url("/images/2144.jpg") no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.msg{
+  padding-top: 5rem;
+  font-size: 3.5rem;
+}
+.cidade{
+  width: 100%;
+  display: table;
+}
+.busca-cidade{
+  margin: 5rem 0 10rem 0;
+}
+.icones-func{
+  margin-left: 5rem;
+}
+.redes-sociais{
+  width: 100%;
+  display: table;
+  margin-bottom: 2rem;
+}
+.botao{
+  margin: 1rem;
 }

@@ -1,5 +1,32 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  nav.navbar.navbar-default.nav-margin
+    .container-fluid
+      .navbar-header
+        a.navbar-brand(href='#') Fiscalize.me
+      ul.nav.navbar-nav.navbar-right
+        li
+          a(href='#') Download App
+        li
+          a(href='#') Sobre
+  .buscador
+    .msg.text-center Fiscalize Obras Públicas
+    .cidade
+        .col-sm-4
+        .col-sm-4.form-group
+          input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade')
+        .col-sm-4
+  h3.icones-func Como Funciona
+    ul
+      li Descrição
+      li Descrição
+      li Descrição
+  h3.text-center.redes Redes Sociais
+    .redes-sociais
+      .col-sm-4
+      .col-sm-4.form-group
+        button.btn.btn-primary.btn-lg.botao(type='button') Facebook
+        button.btn.btn-info.btn-lg.botao(type='button')  Twitter
+        button.btn.btn-danger.btn-lg.botao(type='button')  YouTube
+      .col-sm-4
