@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize');
 
-var sequelize = new Sequelize('postgres://fiscalize_admin:1234@localhost:5432/fiscalize');
+var sequelize = new Sequelize('postgres://fiscalize_admin:1234@localhost:5432/fiscalize', {logging: false});
 
 
 module.exports = {
