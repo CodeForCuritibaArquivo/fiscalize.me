@@ -7,90 +7,199 @@ module.exports = {
 
   Obra : sequelize.define ("dados_obras_governo",{
 
-    cidade	: {
+    municipio : {
 
       type : Sequelize.STRING,
-      field : "cidade"
+      field : "municipio",
 
     },
-    status	: {
+    empreend : {
 
       type : Sequelize.STRING,
-      field : "status"
+      field : "empreend",
 
     },
-    descricao	: {
+    tipo_atualiz	 : {
 
       type : Sequelize.STRING,
-      field : "descricao"
+      field : "atualiz",
 
     },
-    endereco	: {
+    exec	 : {
 
       type : Sequelize.STRING,
-      field : "endereco"
+      field : "exec",
 
     },
-    tipo_projeto	: {
+    proj	 : {
 
       type : Sequelize.STRING,
-      field : "tipo_projeto"
+      field : "proj",
 
     },
-    empresa_contratada	: {
+    lote	 : {
 
       type : Sequelize.STRING,
-      field : "empresa_contratada"
+      field : "lote",
 
     },
-    valor_licitado	: {
+    status_lote	 : {
 
       type : Sequelize.STRING,
-      field : "valor_licitado"
+      field : "status_lote",
 
     },
-    valor_real	: {
+    acao	 : {
 
       type : Sequelize.STRING,
-      field : "valor_real"
+      field : "acao",
 
     },
-    ultima_atualizacao	: {
+    realiz	 : {
 
       type : Sequelize.STRING,
-      field : "ultima_atualizacao"
+      field : "realiz",
 
     },
-    execucao_fisica	: {
+    inic_empreend  : {
 
       type : Sequelize.STRING,
-      field : "execucao_fisica"
+      field : "inic_empreend",
 
     },
-    prazo_conclusao	: {
+    fim_empreend	 : {
 
       type : Sequelize.STRING,
-      field : "prazo_conclusao"
+      field : "fim_empreend",
 
     },
-    prazo_vigencia	: {
+    data_projeto	 : {
 
       type : Sequelize.STRING,
-      field : "prazo_vigencia"
+      field : "data_projeto",
 
     },
-    latidude	: {
+    data_medicao	 : {
 
       type : Sequelize.STRING,
-      field : "latidude"
+      field : "data_medicao",
 
     },
-    longitude: {
+    porcento_exec	 : {
 
       type : Sequelize.STRING,
-      field : "longitude"
+      field : "porcento_exec",
 
     },
+    sit_empreend	 : {
+
+      type : Sequelize.STRING,
+      field : "sit_empreend",
+
+    },
+    valor_empreend	 : {
+
+      type : Sequelize.STRING,
+      field : "valor_empreend",
+
+    },
+    valor_tesouro	 : {
+
+      type : Sequelize.STRING,
+      field : "valor_tesouro",
+
+    },
+    valor_contrap	 : {
+
+      type : Sequelize.STRING,
+      field : "valor_contrap",
+
+    },
+    empreendimento	 : {
+
+      type : Sequelize.STRING,
+      field : "empreendimento",
+
+    },
+    progr	 : {
+
+      type : Sequelize.STRING,
+      field : "progr",
+
+    },
+    programa	 : {
+
+      type : Sequelize.STRING,
+      field : "programa",
+
+    },
+    cod_componente	 : {
+
+      type : Sequelize.STRING,
+      field : "cod_componente",
+
+    },
+    componente	 : {
+
+      type : Sequelize.STRING,
+      field : "componente",
+
+    },
+    cod_bem	 : {
+
+      type : Sequelize.STRING,
+      field : "cod_bem",
+
+    },
+    remessa	 : {
+
+      type : Sequelize.STRING,
+      field : "remessa",
+
+    },
+    ind_aceita	 : {
+
+      type : Sequelize.STRING,
+      field : "ind_aceita",
+
+    },
+    cod_escr_reg	 : {
+
+      type : Sequelize.STRING,
+      field : "cod_escr_reg",
+
+    },
+    executor	 : {
+
+      type : Sequelize.STRING,
+      field : "executor",
+
+    },
+    escritorio_regional	 : {
+
+      type : Sequelize.STRING,
+      field : "escritorio_regional",
+
+    },
+    cod_assoc	 : {
+
+      type : Sequelize.STRING,
+      field : "cod_assoc",
+
+    },
+    n_convenio	 : {
+
+      type : Sequelize.STRING,
+      field : "n_convenio",
+
+    },
+    associacao : {
+
+      type : Sequelize.STRING,
+      field : "associacao",
+
+    },
+
   })
 
 }
