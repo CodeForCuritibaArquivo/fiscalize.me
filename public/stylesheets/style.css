@@ -9,7 +9,7 @@ body {
 }
 .buscador{
 height: 100%;
-background: url("/images/2144.jpg") no-repeat center center fixed;
+background: url("/images/const02.jpg") no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
@@ -18,6 +18,7 @@ background-size: cover;
 .msg{
   padding-top: 5rem;
   font-size: 3.5rem;
+  color: #FFFFFF;
 }
 .cidade{
   width: 100%;
