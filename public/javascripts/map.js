@@ -15,5 +15,11 @@ $(document).ready(function(){
     markers.addLayer(marker);
     //.openPopup();
   }
+  for(var i = 0; i < 1000 ; i++) {
+    var marker = L.marker([-26 + ((Math.random()*10000) / 1000), -56 + ((Math.random()*10000) / 1000)])
+    .bindPopup('Fiscalize.me.<br> Versão 0.1')
+    markers.addLayer(marker);
+    //.openPopup();
+  }
   map.addLayer(markers);
 })
