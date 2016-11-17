@@ -68,8 +68,10 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(3000, function(){
-  console.log("Funciona!!! Porta 3000");
+var port = process.env.PORT || 3000;
+
+app.listen(port, function(){
+  console.log("Funciona!!! Porta " + 3000);
 })
 
 module.exports = app;

@@ -19,6 +19,10 @@
     "pg": "^6.1.0",
     "promise": "^7.1.1",
     "sequelize": "^3.25.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "webpack": "^1.13.3"
+  },
+  "engines" : {
+    "node" : "5.4.0"
   }
 }
