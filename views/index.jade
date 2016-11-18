@@ -11,26 +11,42 @@ block content
           a(href='#') Download App
         li
           a(href='#') Sobre
-  .buscador
-    .msg.text-center Fiscalize Obras Públicas
-    .cidade
+  .primeira-tela
+    .buscador
+      .msg.text-center Fiscalize Obras Públicas
+      .cidade
+          .col-sm-4
+          .col-sm-4.form-group.busca-container
+            i(aria-hidden="true" style="font-size: 2rem").fa.fa-search.busca-icone
+            input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade')
+          .col-sm-4
+    .como-funciona
+      h2.icones-func Como Funciona
+      .passos 
+        .col-sm-4
+          h3 Passo 1
+          div [Texto]
+          div [Imagem]
+        .col-sm-4
+          h3 Passo 2
+          div [Texto]
+          div [Imagem]
+          
+        .col-sm-4
+          h3 Passo 3
+          div [Texto]
+          div [Imagem]
+          
+      
+    .text-center
+      .redes-sociais
+        //- .redes Redes Sociais
         .col-sm-4
         .col-sm-4.form-group
-          input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade')
+          button.btn.btn-primary.botao(type='button') 
+            i(aria-hidden="true").fa.fa-facebook-official
+          button.btn.btn-info.botao(type='button')  
+            i(aria-hidden="true").fa.fa-twitter
+          button.btn.btn-danger.botao(type='button')  
+            i(aria-hidden="true").fa.fa-youtube-play
         .col-sm-4
-  h3.icones-func Como Funciona
-    ul
-      li Descrição
-      li Descrição
-      li Descrição
-  h3.text-center.redes Redes Sociais
-    .redes-sociais
-      .col-sm-4
-      .col-sm-4.form-group
-        button.btn.btn-primary.botao(type='button') 
-          i(aria-hidden="true").fa.fa-facebook-official
-        button.btn.btn-info.botao(type='button')  
-          i(aria-hidden="true").fa.fa-twitter
-        button.btn.btn-danger.botao(type='button')  
-          i(aria-hidden="true").fa.fa-youtube-play
-      .col-sm-4
