@@ -1,7 +1,42 @@
 
 $(document).ready(function(){
 
-  var map = L.map('map').setView([-25.4419, -49.2529], 12);
+  var cidade = new URLSearchParams(window.location.search).get('cidade');
+
+  $.ajax({
+    url:  "http://nominatim.openstreetmap.org/search?format=json&q=" + cidade,
+    method: "GET",
+    success: function(response){
+      //Talvez colocar várias respostas para o usuario
+      console.log(response);
+
+      if(response.length > 0) {
+        var coords_response = {
+          lat: response[0].lat,
+          lon: response[0].lon,
+          zoom: 11,
+        }
+      } else {
+        coords_response = {
+          lat: -15.7754461,
+          lon: -47.797089,
+          zoom: 5
+        }
+      }
+
+      drawMap(coords_response);
+    }
+  })
+
+
+
+})
+
+function drawMap(coords){
+
+
+
+  var map = L.map('map').setView([coords.lat, coords.lon], coords.zoom);
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -22,4 +57,12 @@ $(document).ready(function(){
     //.openPopup();
   }
   map.addLayer(markers);
-})
+}
+
+function buscaPontosCidade(){
+
+}
+
+function buscaTodosPontos(){
+
+}

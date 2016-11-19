@@ -12,6 +12,15 @@ router.get('/mapa', function(req, res, next) {
   res.render('mapa');
 });
 
+router.get('/mapa/:cidade' , function(req, res, next) {
+  //Chamado ajax aos pontos
+  console.log(req.param['cidade']);
+});
+
+
+
+
+// Rota temporária (atualiza no banco)
 router.get('/atualiza_lista_obras', function(req, res, next) {
 
   db.insereListaObras().then(function(dados){

@@ -14,11 +14,11 @@ block content
   .primeira-tela
     .buscador
       .msg.text-center Fiscalize Obras Públicas
-      .cidade
+      form(method="GET" action="/mapa").cidade
           .col-sm-4
           .col-sm-4.form-group.busca-container
             i(aria-hidden="true" style="font-size: 2rem").fa.fa-search.busca-icone
-            input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade')
+            input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade' name="cidade")
           .col-sm-4
     .como-funciona
       h2.icones-func Como Funciona
