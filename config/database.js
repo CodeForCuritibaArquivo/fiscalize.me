@@ -84,13 +84,24 @@ module.exports = {
     });
     fufill(1);
   },
-  buscaListaObras : function() {
+  buscaListaObras : function(cidade) {
     return new Promise(function(fufill,reject) {
       //Busca as obras do banco
+      Obra.findAll({
+        where: {
+          municipio : cidade
+        },
+        attributes: ["municipio", "status_lote", "inic_empreend",
+          "fim_empreend", "valor_empreend", "empreendimento", "programa", "componente"]
+    }).then(function(lista_obras_cidades) {
 
-      console.log("Obras buscadas..");
-      fufill(1);
+        var lista_enviar = [];
 
+        for (var i = 0; i < lista_obras_cidades.length; i++) {
+          lista_enviar.push(lista_obras_cidades[i].dataValues);
+        }
+        fufill(lista_enviar);
+      })
     });
   }
 

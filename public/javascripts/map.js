@@ -3,6 +3,10 @@ $(document).ready(function(){
 
   var cidade = new URLSearchParams(window.location.search).get('cidade');
 
+  if(!cidade) {
+    cidade = "";
+  }
+
   $.ajax({
     url:  "http://nominatim.openstreetmap.org/search?format=json&q=" + cidade,
     method: "GET",

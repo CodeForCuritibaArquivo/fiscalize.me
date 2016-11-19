@@ -13,8 +13,17 @@ router.get('/mapa', function(req, res, next) {
 });
 
 router.get('/mapa/:cidade' , function(req, res, next) {
+
   //Chamado ajax aos pontos
-  console.log(req.param['cidade']);
+  console.log(req.params.cidade);
+  db.buscaListaObras(req.params.cidade).then(function(lista_cidades) {
+    if(lista_cidades.length > 0) {
+      res.send(lista_cidades);
+    } else {
+      res.send(404);
+    }
+  });
+
 });
 
 
