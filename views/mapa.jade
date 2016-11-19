@@ -1,5 +1,40 @@
 extends layout
 
 block content
-  div#map(style="height:100vh; width:100vw")  
+  div#map
+  div#filtros
+      h3.text-center FILTROS
+      div.text-center
+        table(style="margin-left:25%")
+          thead
+            tr
+              th
+              th
+          tbody
+            tr
+              th.text-right            
+                label(for="estado_sel") Estado:
+              th.text-left(style="padding-right:3rem")
+                select(id="estado_sel")
+                  option
+                  option Paraná 
+                  option Santa Catarina
+             tr
+              th.text-right            
+                label(for="cidade_sel") Cidade:
+              th.text-left(style="padding-right:3rem")
+                select(id="cidade_sel")
+                  option
+                  option Curitiba 
+                  option São José 
+            tr
+              th.text-right            
+                label(for="tipo_obra_sel") Tipo da Obra
+              th.text-left(style="padding-right:3rem")
+                select(id="tipo_obra_sel")
+                  option
+                  option Tipo 1 
+                  option Tipo 2 
+                  option Tipo 3 
+      
   script(src="/javascripts/map.js")
