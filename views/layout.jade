@@ -15,5 +15,17 @@ html
     script(src='/jquery/jquery.min.js')
     
   body
+    nav.navbar.navbar-default.nav-margin
+      .container-fluid
+        .navbar-header
+          a.navbar-brand(href='#')
+            img(src='/images/Avatar.png' style="max-width:32px;")
+        ul.nav.navbar-nav.navbar-right
+          li
+            a(href="#") Mapa
+          li
+            a(href='#') Download App
+          li
+            a(href='/sobre') Sobre
     block content
     

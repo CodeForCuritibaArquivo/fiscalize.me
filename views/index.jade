@@ -1,16 +1,7 @@
 extends layout
 
 block content
-  nav.navbar.navbar-default.nav-margin
-    .container-fluid
-      .navbar-header
-        a.navbar-brand(href='#')
-          img(src='/images/Avatar.png' style="max-width:32px;")
-      ul.nav.navbar-nav.navbar-right
-        li
-          a(href='#') Download App
-        li
-          a(href='#') Sobre
+
   .primeira-tela
     .buscador
       .msg.text-center Fiscalize Obras Públicas
@@ -44,9 +35,12 @@ block content
         .col-sm-4
         .col-sm-4.form-group
           button.btn.btn-primary.botao(type='button') 
-            i(aria-hidden="true").fa.fa-facebook-official
+            a(href="https://www.facebook.com/fiscalize.me/")
+              i(aria-hidden="true").fa.fa-facebook-official
           button.btn.btn-info.botao(type='button')  
-            i(aria-hidden="true").fa.fa-twitter
-          button.btn.btn-danger.botao(type='button')  
-            i(aria-hidden="true").fa.fa-youtube-play
+            a(href="https://twitter.com/fiscalizeme")
+              i(aria-hidden="true").fa.fa-twitter
+          button.btn.btn-danger.botao(type='button')
+            a(href="https://www.youtube.com/channel/UCKNwMKb2q4hlUWfSeuiv7Lg")
+              i(aria-hidden="true").fa.fa-youtube-play
         .col-sm-4

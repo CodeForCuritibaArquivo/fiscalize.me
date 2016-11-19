@@ -8,6 +8,11 @@ body {
   position: relative;
 }
 
+button a {
+  color: #ffffff !important;
+  text-decoration: none; /* no underline */
+}
+
 .primeira-tela {
   position: relative;
   height: 100%;
