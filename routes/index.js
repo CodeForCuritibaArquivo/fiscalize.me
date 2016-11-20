@@ -36,7 +36,7 @@ router.post('/mapa' , function(req, res, next) {
 // Rota temporária (atualiza no banco)
 router.get('/atualiza_lista_obras', function(req, res, next) {
   db.insereListaObras().then(function(dados){
-    console.log(dados);
+
   })
 });
 

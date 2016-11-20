@@ -33,7 +33,6 @@ module.exports = {
       //Insere as obras no banco partindo de um arquivo csv.
       read_obra_csv().then(function(lista_obras){
 
-        console.log(lista_obras.length);
         Obra.destroy({where: {}});
 
         lista_obras.forEach(function(obra) {
