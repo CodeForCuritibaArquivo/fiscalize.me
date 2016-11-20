@@ -20,7 +20,7 @@ $(document).ready(function(){
 
 
   $.ajax({
-    url:  "http://nominatim.openstreetmap.org/search?format=json&city=" + cidade,
+    url:  "https://nominatim.openstreetmap.org/search?format=json&city=" + cidade,
     method: "GET",
     success: function(response){
       //Talvez colocar várias respostas para o usuario
