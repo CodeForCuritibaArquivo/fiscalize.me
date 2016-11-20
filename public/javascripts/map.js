@@ -1,14 +1,26 @@
 
 $(document).ready(function(){
 
-  var cidade = new URLSearchParams(window.location.search).get('cidade');
-
+  var cidade = window.location.search.substr(8,window.location.search.length);
+  cidade = cidade.split("+").join(" ");
+  cidade = decodeURI(cidade);
   if(!cidade) {
     cidade = "";
   }
 
   $.ajax({
-    url:  "http://nominatim.openstreetmap.org/search?format=json&q=" + cidade,
+      url : "/mapa" ,
+      method : "POST",
+      data: {cidade : cidade},
+      dataType: 'json',
+      success : function(lista_cidades) {
+        console.log(lista_cidades);
+      },
+  })
+
+
+  $.ajax({
+    url:  "http://nominatim.openstreetmap.org/search?format=json&city=" + cidade,
     method: "GET",
     success: function(response){
       //Talvez colocar várias respostas para o usuario

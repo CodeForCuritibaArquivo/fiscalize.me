@@ -3,6 +3,10 @@ var fs = require('fs');
 var Promise = require('promise');
 var parse = require('csv-parse');
 var path = require('path');
+var Sequelize = require('sequelize');
+var sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://fiscalize_admin:1234@localhost:5432/fiscalize', {logging: false});
+
+
 
 var read_obra_csv = function() {
   return new Promise(function(fufill, reject) {
@@ -84,6 +88,7 @@ module.exports = {
     });
     fufill(1);
   },
+
   buscaListaObras : function(cidade) {
     return new Promise(function(fufill,reject) {
       //Busca as obras do banco
@@ -103,6 +108,29 @@ module.exports = {
         fufill(lista_enviar);
       })
     });
+  },
+
+  buscaAutocomplete : function(query) {
+    return new Promise(function(fufill, reject) {
+      Obra.findAll({
+        where: {
+          municipio : {
+            $like: "%" + query + "%"
+          }
+        }, attributes: ["municipio"],
+        limit: 5,
+      }).then(function(lista_municipios) {
+          var arr_enviar = []
+          for (var i = 0; i < lista_municipios.length; i++) {
+            if((arr_enviar.indexOf(lista_municipios[i].dataValues.municipio)) === -1) {
+              arr_enviar.push(lista_municipios[i].dataValues.municipio);
+            }
+          }
+          fufill(arr_enviar);
+        })
+      })
   }
+
+
 
 }

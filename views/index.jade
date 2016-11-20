@@ -1,7 +1,7 @@
 extends layout
 
 block content
-
+  
   .primeira-tela
     .buscador
       .msg.text-center Fiscalize Obras Públicas
@@ -9,7 +9,8 @@ block content
           .col-sm-4
           .col-sm-4.form-group.busca-container
             i(aria-hidden="true" style="font-size: 2rem").fa.fa-search.busca-icone
-            input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(type='text' placeholder='Buscar cidade' name="cidade")
+            input.col-sm-4.form-control.form-inline.input-lg.busca-cidade(id="busca" type='text' placeholder='Buscar cidade' name="cidade")
+            div#respostas-container
           .col-sm-4
     .como-funciona
       h2.icones-func Como Funciona
@@ -44,3 +45,4 @@ block content
             a(href="https://www.youtube.com/channel/UCKNwMKb2q4hlUWfSeuiv7Lg")
               i(aria-hidden="true").fa.fa-youtube-play
         .col-sm-4
+  script(src="/javascripts/index.js")

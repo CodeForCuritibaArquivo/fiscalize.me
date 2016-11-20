@@ -10,19 +10,24 @@ html
     link(rel='stylesheet', href='/leaflet/leaflet.css')
     link(rel='stylesheet', href="/leaflet/leafletCluster/MarkerCluster.css")
     link(rel='stylesheet', href="/leaflet/leafletCluster/MarkerCluster.Default.css")
+    link(rel='stylesheet', href="/jqueryui/jquery-ui.min.css")
+    link(rel='stylesheet', href="/jqueryui/jquery-ui.structure.min.css")
+    link(rel='stylesheet', href="/jqueryui/jquery-ui.theme.min.css")
     script(src='/leaflet/leaflet.js')
     script(src="/leaflet/leafletCluster/leaflet.markercluster.js")
     script(src='/jquery/jquery.min.js')
+    script(src='/jqueryui/jquery-ui.min.js')
+    
     
   body
     nav.navbar.navbar-default.nav-margin
       .container-fluid
         .navbar-header
-          a.navbar-brand(href='#')
+          a.navbar-brand(href='/')
             img(src='/images/Avatar.png' style="max-width:32px;")
         ul.nav.navbar-nav.navbar-right
           li
-            a(href="#") Mapa
+            a(href="/mapa") Mapa
           li
             a(href='#') Download App
           li
